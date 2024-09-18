@@ -19,10 +19,16 @@
           }
            
           function HomePage() {
+            const names = ['Eliza', 'Isabella', 'Joilson']
+
             return (
               <div>
-                <Header title="React" />
-                <Header title="A new title" />
+                <Header title="Develop. Preview. Ship." />
+                <ul>
+                    {names.map((name) => (
+                        <li>{name}</li>
+                    ))}
+                </ul>   
               </div>
             );
           }
