@@ -15,16 +15,15 @@
         const app = document.getElementById('app')
 
         function Header({ title }) {
-            return <h1>{`Cool ${title}`}</h1>;
+            return <h1>{title ? title : 'Default title'}</h1>;
           }
-        
-        function HomePage() {
+           
+          function HomePage() {
             return (
-                <div>
-                    {/* Nesting the Header component */}
-                    <Header title="React"/>
-                </div>
-            )
+              <div>
+                <Header />
+              </div>
+            );
           }
            
         const root = ReactDOM.createRoot(app);
